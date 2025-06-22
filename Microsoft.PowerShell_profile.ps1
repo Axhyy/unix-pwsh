@@ -1,4 +1,4 @@
-$githubUser = "CrazyWolf13" # Change this here if you forked the repository.
+$githubUser = "Axhyy" # Change this here if you forked the repository.
 $name= "User" # Change this to your name.
 $githubRepo = "unix-pwsh" # Change this here if you forked the repository and changed the name.
 $githubBaseURL= "https://raw.githubusercontent.com/$githubUser/$githubRepo/main"
@@ -22,10 +22,10 @@ $baseDir = "$HOME\unix-pwsh"
 $configPath = "$baseDir\pwsh_custom_config.yml"
 $xConfigPath = "$baseDir\pwsh_full_custom_config.yml" # This file exists if the prompt is fully installed with all dependencies.
 $promptColor = "DarkCyan" # Choose a color in which the hello text is colored; All Colors: Black, Blue, Cyan, DarkBlue, DarkCyan, DarkGray, DarkGreen, DarkMagenta, DarkRed, DarkYellow, Gray, Green, Magenta, Red, White, Yellow.
-$font="FiraCode" # Font-Display and variable Name, name the same as font_folder
-$font_url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip" # Put here the URL of the font file that should be installed
-$fontFileName = "FiraCodeNerdFontMono-Regular.ttf" # Put here the font file that should be installed
-$font_folder = "FiraCode" # Put here the name of the zip folder of the downloaded font, but without the .zip extension.
+$font="CascadiaMono" # Font-Display and variable Name, name the same as font_folder
+$font_url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip" # Put here the URL of the font file that should be installed
+$fontFileName = "CascadiaMono.ttf" # Put here the font file that should be installed
+$font_folder = "CascadiaMono" # Put here the name of the zip folder of the downloaded font, but without the .zip extension.
 
 $modules = @( 
     # This is a list of modules that need to be imported / installed
@@ -76,7 +76,6 @@ if ($allFilesExist -contains $false) {
 # Check for dependencies and if not chainload the installer.
 if (Test-Path -Path $xConfigPath) {
     # Check if the Master config file exists, if so skip every other check.
-    Write-Host "✅ Successfully initialized Pwsh`n" -ForegroundColor Green
     Import-Module Terminal-Icons
     # foreach ($module in $modules) {
     #     # As the master config exists, we assume that all modules are installed.
