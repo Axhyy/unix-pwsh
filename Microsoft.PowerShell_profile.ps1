@@ -64,10 +64,6 @@ function Run-UpdatePowershell {
 
 # ----------------------------------------------------------------------------
 
-Write-Host ""
-Write-Host "Welcome $name ⚡" -ForegroundColor $promptColor
-Write-Host ""
-
 # Function to check if all the $files exist or not.
 $allFilesExist = $files | ForEach-Object { Join-Path -Path $baseDir -ChildPath $_ } | Test-Path -PathType Leaf -ErrorAction SilentlyContinue | ForEach-Object { $_ -eq $true }
 if ($allFilesExist -contains $false) {
